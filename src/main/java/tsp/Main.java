@@ -10,6 +10,8 @@ public class Main {
     System.out.println("Resultado TSP Brute Force: " + tsp.run());
     tsp = new TSPGreedy(graph, 0);
     System.out.println("Resultado TSP Greedy: " + tsp.run());
+    tsp = new TSPDynamicProgramming(graph, 0);
+    System.out.println("Resultado TSP Dynamic Programming: " + tsp.run());
     graph.toFile(outputFilename);
   }
 }
