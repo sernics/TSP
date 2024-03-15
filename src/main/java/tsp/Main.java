@@ -8,6 +8,8 @@ public class Main {
     Graph graph = new Graph(filename);
     TSPInterface tsp = new TSPBruteForce(graph, 0);
     System.out.println("Resultado TSP Brute Force: " + tsp.run());
-    // graph.toFile(outputFilename);
+    tsp = new TSPGreedy(graph, 0);
+    System.out.println("Resultado TSP Greedy: " + tsp.run());
+    graph.toFile(outputFilename);
   }
 }

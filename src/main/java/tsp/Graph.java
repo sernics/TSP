@@ -39,6 +39,9 @@ public class Graph {
   public Integer get(Integer i, Integer j) {
     return graph[i][j];
   }
+  public Integer[] get(Integer i) {
+    return graph[i];
+  }
   public Integer getSize() {
     return size;
   }
@@ -60,6 +63,7 @@ public class Graph {
   public void toFile(String filename) {
   try {
     BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+    writer.write(",");
     for (int i = 0; i < size; i++) {
       writer.write(integerToChar(i) + ",");
     }
