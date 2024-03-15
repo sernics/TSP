@@ -36,6 +36,12 @@ public class Graph {
       System.out.println("Error al leer el archivo");
     }
   }
+  public Integer get(Integer i, Integer j) {
+    return graph[i][j];
+  }
+  public Integer getSize() {
+    return size;
+  }
   public void print() {
     // Imprimir A B C D ...
     System.out.print("  ");
