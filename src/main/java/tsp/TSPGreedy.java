@@ -34,7 +34,7 @@ public class TSPGreedy implements TSPInterface {
     Integer min = Integer.MAX_VALUE;
     Integer index = 0;
     for (int i = 0; i < distances.length; i++) {
-      if (distances[i] != 0 && distances[i] < min && !visitados[i]) {
+      if (distances[i] != null && distances[i] < min && !visitados[i]) {
         min = distances[i];
         index = i;
       }
