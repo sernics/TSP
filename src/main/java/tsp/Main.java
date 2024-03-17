@@ -8,13 +8,16 @@ public class Main {
     Graph graph = new Graph(filename);
     TSPInterface tsp = new TSPBruteForce(graph, 0);
     System.out.println("Resultado TSP Brute Force: " + tsp.run());
-    System.out.println("Path: " + tsp.getPath());
+    System.out.print("Path: ");
+    tsp.printPath(tsp.getPath());
     tsp = new TSPGreedy(graph, 0);
     System.out.println("Resultado TSP Greedy: " + tsp.run());
-    System.out.println("Path: " + tsp.getPath());
+    System.out.print("Path: ");
+    tsp.printPath(tsp.getPath());
     tsp = new TSPDynamicProgramming(graph, 0);
     System.out.println("Resultado TSP Dynamic Programming: " + tsp.run());
-    System.out.println("Path: " + tsp.getPath());
+    System.out.print("Path: ");
+    tsp.printPath(tsp.getPath());
     graph.toFile(outputFilename);
-  }
+  }  
 }
