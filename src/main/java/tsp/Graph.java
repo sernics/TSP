@@ -33,7 +33,25 @@ public class Graph {
       }
       reader.close();
     } catch (Exception e) {
-      System.out.println("Error al leer el archivo");
+      System.out.println(e.getMessage());
+    }
+  }
+  Graph (Integer size) {
+    this.size = size;
+    graph = new Integer[size][size];
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        graph[i][j] = 0;
+      }
+    }
+  }
+  public void generateRandomGraph() {
+    for (int i = 0; i < size; i++) {
+      for (int j = 0; j < size; j++) {
+        if (i != j) {
+          graph[i][j] = (int) (Math.random() * 100);
+        }
+      }
     }
   }
   public Integer get(Integer i, Integer j) {

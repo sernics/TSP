@@ -1,4 +1,4 @@
-6
+10
 A B 25
 A C 10
 A D 15
@@ -9,3 +9,11 @@ B E 20
 C F 30
 D E 12
 E F 25
+D G 18
+G H 22
+G I 17
+H I 8
+H J 21
+I J 15
+E J 13
+F J 11

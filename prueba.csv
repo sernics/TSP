@@ -1,0 +1,5 @@
+Instancia, Valor Fuerza Bruta, Tiempo Fuerza Bruta (ms), Valor Greedy, Tiempo Greedy (ms), Valor Programación Dinámica, Tiempo Programación Dinámica (ms)
+4 nodos,100,1,100,0,100,0
+6 nodos,147,1,243,0,147,0
+8 nodos,93,5,219,0,93,0
+10 nodos,192,54,252,0,192,0
