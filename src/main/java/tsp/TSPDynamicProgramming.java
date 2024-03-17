@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TSPDynamicProgramming implements TSPInterface {
+  private static final long TIME_LIMIT = 300000; // 5 minutes in milliseconds
+  private long startTime; // Execution start time
   private Graph graph;
   private Integer start;
   private int[][] matrix;
@@ -15,11 +17,18 @@ public class TSPDynamicProgramming implements TSPInterface {
   }
 
   public Integer run() {
+    startTime = System.currentTimeMillis(); // Save the start time
+
     int mask = (1 << graph.getSize()) - 1;
     return tsp(start, mask);
   }
 
   private int tsp(int current, int mask) {
+    // Check if time limit exceeded
+    if (System.currentTimeMillis() - startTime > TIME_LIMIT) {
+      return Integer.MAX_VALUE; // Indicate that the time limit has been exceeded
+    }
+
     if (mask == 0) {
       return graph.get(current, start);
     }
@@ -45,11 +54,11 @@ public class TSPDynamicProgramming implements TSPInterface {
     List<Integer> path = new ArrayList<>();
     int mask = (1 << graph.getSize()) - 1;
     int current = start;
-  
+
     while (mask != 0) {
       int next = -1;
       int minDistance = Integer.MAX_VALUE;
-  
+
       for (int i = 0; i < graph.getSize(); i++) {
         if ((mask & (1 << i)) != 0) {
           int distance = graph.get(current, i) + matrix[i][mask ^ (1 << i)];
@@ -59,12 +68,17 @@ public class TSPDynamicProgramming implements TSPInterface {
           }
         }
       }
-  
+
       current = next;
       mask ^= (1 << next);
       path.add(current);
+
+      // Check if time limit exceeded
+      if (System.currentTimeMillis() - startTime > TIME_LIMIT) {
+        return null; // Indicate that the time limit has been exceeded
+      }
     }
-  
+
     path.add(start);
     return path;
   }
