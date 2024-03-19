@@ -1,0 +1,10 @@
+Instancia, Media Valor Fuerza Bruta, Media Tiempo Fuerza Bruta (ms), Media Valor Greedy, Media Tiempo Greedy (ms), Media Valor Programación Dinámica, Media Tiempo Programación Dinámica (ms)
+4 nodos,148,0ms,161,0ms,148,0ms
+6 nodos,138,1ms,194,0ms,138,0ms
+8 nodos,151,1ms,204,0ms,150,0ms
+10 nodos,182,54ms,222,0ms,182,1ms
+12 nodos,154,5304ms,226,0ms,154,4ms
+14 nodos,270,6001ms,293,0ms,163,19ms
+16 nodos,343,6001ms,303,0ms,167,101ms
+18 nodos,438,6001ms,274,0ms,115,540ms
+20 nodos,557,600ms,330,0ms,176,3678ms

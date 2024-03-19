@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TSPBruteForce implements TSPInterface {
-  private static final long TIME_LIMIT = 300000; // 5 minutes in milliseconds
+  private static final long TIME_LIMIT = 6000; // 6 seconds
   private long startTime; // Execution start time
   private Graph graph;
   private Integer start;
